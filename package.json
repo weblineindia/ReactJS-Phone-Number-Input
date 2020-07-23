@@ -4,7 +4,7 @@
   "description": "ReactJS based Phone Number component. It provides input field to add single/multiple telephone numbers with validation. The Phone number value is automatically validated on blur event. You can change validation message using props. You can also disable Phone number field using disable props.",
   "author": "weblineindia",
   "license": "MIT",
-  "repository": "http://git-ar.webline.local/ReactJS/Phone_Number_Component",
+  "repository": "https://github.com/weblineindia/ReactJS-Phone-Number-Input",
   "homepage": "https://www.weblineindia.com/software-development-resources.html",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",

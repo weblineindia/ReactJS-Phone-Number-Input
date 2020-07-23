@@ -24,7 +24,7 @@ ReactJS based Phone Number component. It provides input field to add single/mult
 
 ## Demo
 
-[![](phone.gif)](http://git-ar.webline.local/ReactJS/Phone_Number_Component/phone.gif)
+[![](phone.gif)](https://github.com/weblineindia/ReactJS-Phone-Number-Input/phone.gif)
 
 ## Getting started
 
@@ -152,7 +152,7 @@ Detailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.m
 
 [MIT](LICENSE)
 
-[mit]: http://git-ar.webline.local/ReactJS/Phone_Number_Component/blob/master/LICENSE
+[mit]: https://github.com/weblineindia/ReactJS-Phone-Number-Input/blob/master/LICENSE
 
 ## Keywords
 

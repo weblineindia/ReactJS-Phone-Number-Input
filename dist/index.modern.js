@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
 }
@@ -1077,21 +1083,28 @@ if (process.env.NODE_ENV !== 'production') {
 }
 });
 
-const ONLY_NUMBERS_REGEX = /^[0-9\b]+$/;
+var ONLY_NUMBERS_REGEX = /^[0-9\b]+$/;
 
-class PhoneNumber extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+var PhoneNumber = /*#__PURE__*/function (_Component) {
+  _inheritsLoose(PhoneNumber, _Component);
+
+  function PhoneNumber(props) {
+    var _this;
+
+    _this = _Component.call(this, props) || this;
+    _this.state = {
       isError: false,
       isInvalidPhone: false,
       isDuplicatePhone: false,
-      phoneCodeValue: this.props.defaultSelectedCountry
+      phoneCodeValue: _this.props.defaultSelectedCountry
     };
+    return _this;
   }
 
-  handleInput(event) {
-    let regex = this.props.regex;
+  var _proto = PhoneNumber.prototype;
+
+  _proto.handleInput = function handleInput(event) {
+    var regex = this.props.regex;
 
     if (event.target.value === "" || regex.test(event.target.value)) {
       this.props.onChange(event, this.props.index);
@@ -1100,15 +1113,15 @@ class PhoneNumber extends Component {
     this.setState({
       isInvalidPhone: false
     });
-  }
+  };
 
-  handleFocus(event) {
+  _proto.handleFocus = function handleFocus(event) {
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
-  }
+  };
 
-  handleBlur(event) {
+  _proto.handleBlur = function handleBlur(event) {
     if (this.props.onBlur()) {
       this.props.onBlur(event);
     }
@@ -1116,13 +1129,13 @@ class PhoneNumber extends Component {
     event.preventDefault();
     event.stopPropagation();
     this.checkDupllicatePhone();
-  }
+  };
 
-  checkDupllicatePhone() {
-    const tempArray = [];
+  _proto.checkDupllicatePhone = function checkDupllicatePhone() {
+    var tempArray = [];
 
     if (this.props.value.length > 1) {
-      for (let i = 0; i <= this.props.value.length - 1; i++) {
+      for (var i = 0; i <= this.props.value.length - 1; i++) {
         if (i !== this.props.index && this.props.value[i].phone !== '' && this.props.value[this.props.index].phone !== '') {
           if (this.props.value[i].phone === this.props.value[this.props.index].phone) {
             if (this.props.defaultSelectedCountry[i].code === this.state.phoneCodeValue[this.props.index].code) {
@@ -1142,42 +1155,44 @@ class PhoneNumber extends Component {
         isDuplicatePhone: false
       });
     }
-  }
+  };
 
-  handleKeyDown(event) {
+  _proto.handleKeyDown = function handleKeyDown(event) {
     if (this.props.onKeyDown()) {
       this.props.onKeyDown(event);
     }
-  }
+  };
 
-  handleKeyUp(event) {
+  _proto.handleKeyUp = function handleKeyUp(event) {
     if (this.props.onKeyUp()) {
       this.props.onKeyUp(event);
     }
-  }
+  };
 
-  handleKeyPress(event) {
+  _proto.handleKeyPress = function handleKeyPress(event) {
     if (this.props.onKeyPress()) {
       this.props.onKeyPress(event);
     }
-  }
+  };
 
-  onMultipleAdd() {
+  _proto.onMultipleAdd = function onMultipleAdd() {
     this.props.onMultiplePhone();
-  }
+  };
 
-  onChageDropdownValue(event) {
-    let value = this.props.preferredCountries.filter(x => x.code === event.target.value);
-    let vData = this.props.defaultSelectedCountry;
+  _proto.onChageDropdownValue = function onChageDropdownValue(event) {
+    var value = this.props.preferredCountries.filter(function (x) {
+      return x.code === event.target.value;
+    });
+    var vData = this.props.defaultSelectedCountry;
     vData[this.props.index] = value[0];
     this.setState({
       phoneCodeValue: vData
     });
     this.props.onChageDropdown(vData, this.props.index);
     this.checkDupllicatePhone();
-  }
+  };
 
-  render() {
+  _proto.render = function render() {
     return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
       className: "list-view"
     }, /*#__PURE__*/React.createElement("div", {
@@ -1187,13 +1202,13 @@ class PhoneNumber extends Component {
       value: this.state.phoneCodeValue[this.props.index].code,
       name: this.props.name + this.props.index,
       onChange: this.onChageDropdownValue.bind(this)
-    }, this.props.preferredCountries.map((e, key) => {
+    }, this.props.preferredCountries.map(function (e, key) {
       return /*#__PURE__*/React.createElement("option", {
         key: key,
         value: e.code
       }, e.code);
     })) : ""), /*#__PURE__*/React.createElement("div", {
-      class: "phone-input"
+      "class": "phone-input"
     }, /*#__PURE__*/React.createElement("input", {
       id: this.props.id,
       name: this.props.name,
@@ -1226,9 +1241,10 @@ class PhoneNumber extends Component {
     }, this.props.phoneFormateError) : "", this.state.isDuplicatePhone ? /*#__PURE__*/React.createElement("div", {
       className: "error-msg"
     }, this.props.duplicatePhoneError) : "")));
-  }
+  };
 
-}
+  return PhoneNumber;
+}(Component);
 
 PhoneNumber.propTypes = {
   onChange: propTypes.func,
@@ -1261,14 +1277,14 @@ PhoneNumber.propTypes = {
   preferredCountries: propTypes.array
 };
 PhoneNumber.defaultProps = {
-  onFocus: function () {},
-  onBlur: function () {},
-  onKeyDown: function () {},
-  onKeyPress: function () {},
-  onKeyUp: function () {},
-  onChange: function () {},
-  onMultiplePhone: function () {},
-  onChageDropdown: function () {},
+  onFocus: function onFocus() {},
+  onBlur: function onBlur() {},
+  onKeyDown: function onKeyDown() {},
+  onKeyPress: function onKeyPress() {},
+  onKeyUp: function onKeyUp() {},
+  onChange: function onChange() {},
+  onMultiplePhone: function onMultiplePhone() {},
+  onChageDropdown: function onChageDropdown() {},
   placeholder: "Phone Number",
   id: "",
   name: "",
@@ -1288,10 +1304,7 @@ PhoneNumber.defaultProps = {
   isShowPlus: true,
   isMultiple: true,
   index: 0,
-  defaultSelectedCountry: [{
-    code: "IN",
-    maxlength: 10
-  }],
+  defaultSelectedCountry: [],
   ignoredCountries: false,
   preferredCountries: []
 };

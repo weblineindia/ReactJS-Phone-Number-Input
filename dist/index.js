@@ -1307,10 +1307,7 @@ PhoneNumber.defaultProps = {
   isShowPlus: true,
   isMultiple: true,
   index: 0,
-  defaultSelectedCountry: [{
-    code: "IN",
-    maxlength: 10
-  }],
+  defaultSelectedCountry: [],
   ignoredCountries: false,
   preferredCountries: []
 };
