@@ -1,0 +1,37 @@
+@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+p.control.error-msg {
+    color: red;
+  }
+  .add-remove {
+    top: 16px;
+    padding: 0 0 0 5px;
+    position: absolute;
+  }
+  
+  .add-remove span {
+    padding: 0 0 0 5px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #2c3e50;
+  }
+  .list-view {
+    margin: auto;
+    width: 80%;
+    position: relative;
+  }
+  .form-control {
+    width: 50%;
+    /* padding: 12px 20px; */
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .option-block { width: 10%; float: left; margin-right: 20px; }
+  .phone-input { width: 58%; }
+  .error-msg{
+    color: red;
+  }
+  .add-minus{
+    padding: 10px;
+  }
