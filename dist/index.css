@@ -1,37 +1,43 @@
 @import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
 p._3HF9A._3MxmM {
-    color: red;
-  }
-  ._AYaEf {
-    top: 16px;
-    padding: 0 0 0 5px;
-    position: absolute;
-  }
-  
-  ._AYaEf span {
-    padding: 0 0 0 5px;
-    font-size: 12px;
-    font-weight: normal;
-    color: #2c3e50;
-  }
-  ._2ZQmc {
-    margin: auto;
-    width: 80%;
-    position: relative;
-  }
-  ._2LI2p {
-    width: 50%;
-    /* padding: 12px 20px; */
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  ._3x6ql { width: 10%; float: left; margin-right: 20px; }
-  ._2Xxq_ { width: 58%; }
-  ._3MxmM{
-    color: red;
-  }
-  ._iVrkI{
-    padding: 10px;
-  }
+  color: red;
+}
+._AYaEf {
+  top: 16px;
+  padding: 0 0 0 5px;
+  position: absolute;
+}
+
+._AYaEf span {
+  padding: 0 0 0 5px;
+  font-size: 12px;
+  font-weight: normal;
+  color: #2c3e50;
+}
+._2ZQmc {
+  margin: auto;
+  width: 80%;
+  position: relative;
+}
+._2LI2p {
+  width: 50%;
+  /* padding: 12px 20px; */
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+._3x6ql {
+  width: 10%;
+  float: left;
+  margin-right: 20px;
+}
+._2Xxq_ {
+  width: 58%;
+}
+._3MxmM {
+  color: red;
+}
+._iVrkI {
+  padding: 10px;
+}
